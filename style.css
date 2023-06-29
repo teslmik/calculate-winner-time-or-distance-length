@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  display: block;
+  margin: 30px 0;
+}
+
+label {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.checkbox-hr {
+  margin: 10px 0;
+}
+
+.men-checkbox,
+.women-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 6px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.header-data {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 2px;
+}
+
+.data-input {
+  width: 60px;
+  padding: 5px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-column {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  flex: 1;
+  text-align: center;
+}
+
+#groupMultiplier {
+  display: none;
+  visibility: hidden;
+}
+
+.input-container {
+  display: flex;
+  gap: 2px;
+}
+
+.win-pref-time > div > input {
+  max-width: 40px;
+  text-align: center;
+}
+
+.pref-length-dist > div > input {
+  max-width: 50px;
+  text-align: center;
+}
+
+@media (max-width: 792px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-data {
+    width: auto;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 16px;
+  }
+
+  .grid-container {
+    overflow-x: auto;
+    width: 792px;
+  }
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}
