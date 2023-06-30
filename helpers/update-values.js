@@ -1,3 +1,5 @@
+'use strict';
+
 import * as componentsJs from '../components/components.js';
 import { convertTimeToDecimal } from './helpers.js';
 

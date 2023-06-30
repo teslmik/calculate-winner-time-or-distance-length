@@ -1,3 +1,5 @@
+'use strict';
+
 import { renderCalcWinTime } from './render-calculate-winner-time.js';
 import { SEX } from '../constants/constants.js';
 

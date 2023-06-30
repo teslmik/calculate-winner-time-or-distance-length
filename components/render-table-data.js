@@ -1,3 +1,5 @@
+'use strict';
+
 export const renderTableData = (elementsContainer, data, firstRow = '') => {
   const elements = data.map((element) => `<div class="grid-item title">${element}</div>`);
 

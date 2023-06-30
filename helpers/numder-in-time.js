@@ -1,3 +1,5 @@
+'use strict';
+
 export const convertDecimalToTime = (decimalNumber) => {
   if (typeof decimalNumber === 'string') {
     decimalNumber = parseFloat(decimalNumber.replace(',', '.'));

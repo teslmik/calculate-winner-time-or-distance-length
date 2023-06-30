@@ -1,3 +1,5 @@
+'use strict';
+
 import { renderCalcDist } from './render-calculate-distance.js';
 import { SEX } from '../constants/constants.js';
 

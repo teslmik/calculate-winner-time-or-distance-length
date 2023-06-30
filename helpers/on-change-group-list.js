@@ -1,3 +1,5 @@
+'use strict';
+
 export const onChangeGroupList = (event, menValues, womenValues) => {
   const checkbox = event.target;
   const label = checkbox.closest('label');

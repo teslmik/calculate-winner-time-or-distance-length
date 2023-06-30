@@ -1,3 +1,5 @@
+'use strict';
+
 import { MULTIPLIER, RACE_FACTOR_MEN, RACE_FACTOR_WOMEN, SEX } from '../constants/constants.js';
 import { convertDecimalToTime } from '../helpers/numder-in-time.js';
 
