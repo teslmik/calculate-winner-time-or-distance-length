@@ -1,6 +1,8 @@
 import { renderCalcWinTime } from './render-calculate-winner-time.js';
 import { SEX } from '../constants/constants.js';
 
+const calcTime = document.querySelectorAll('.calc-win-time');
+
 export const renderPrefLengthDist = (
   elementsContainer,
   data,
@@ -31,15 +33,14 @@ export const renderPrefLengthDist = (
 
   data.forEach((element) => {
     const inputsContainer = elementsContainer.querySelector(`[data-input-id="dist-${element}"]`),
-      input = inputsContainer.querySelector('input'),
-      calcTime = document.querySelectorAll('.calc-win-time');
+      input = inputsContainer.querySelector('input');
 
-      input.addEventListener('input', () => {
-        const timeConteiner = element[0] === SEX[0] ? calcTime[0] : calcTime[1];
+    input.addEventListener('input', () => {
+      const timeConteiner = element[0] === SEX[0] ? calcTime[0] : calcTime[1];
 
-        updatePrefLendthDist();
-        renderCalcWinTime(timeConteiner, data, prefLengthDist, startDataInputValue);
-      });
+      updatePrefLendthDist();
+      renderCalcWinTime(timeConteiner, data, prefLengthDist, startDataInputValue);
+    });
 
   });
 };

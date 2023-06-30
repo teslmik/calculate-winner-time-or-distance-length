@@ -1,7 +1,8 @@
 'use strict';
 
 import { TABLE_HEADERS, SEX } from './constants/constants.js';
-import { updateValues, renderTableData, onChangeGroupList } from './helpers/helpers.js';
+import { renderTableData } from './components/components.js';
+import { updateValues, onChangeGroupList } from './helpers/helpers.js';
 
 const tableHeaders = document.querySelectorAll('.table-header'),
   checkboxContainer = document.querySelector('.checkbox-container'),

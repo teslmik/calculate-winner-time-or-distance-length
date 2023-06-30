@@ -1,4 +1,4 @@
-export function convertDecimalToTime(decimalNumber) {
+export const convertDecimalToTime = (decimalNumber) => {
   if (typeof decimalNumber === 'string') {
     decimalNumber = parseFloat(decimalNumber.replace(',', '.'));
   }
@@ -12,4 +12,4 @@ export function convertDecimalToTime(decimalNumber) {
   var time = hours + ':' + (minutes < 10 ? '0' : '') + minutes;
 
   return time;
-}
+};

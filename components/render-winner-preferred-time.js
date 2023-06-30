@@ -1,11 +1,13 @@
 import { renderCalcDist } from './render-calculate-distance.js';
 import { SEX } from '../constants/constants.js';
 
+const calcDist = document.querySelectorAll('.calc-dist');
+
 export const renderWinPrefTime = (
   elementsContainer,
   data,
   winPrefTimeValues,
-  startDataInputValue
+  startDataInputValue,
 ) => {
   const elements = data.map((element) => {
     const value = winPrefTimeValues[element]?.split(':') ?? ['00', '00'];
@@ -28,16 +30,14 @@ export const renderWinPrefTime = (
       const inputs = inputsContainer.querySelectorAll('input');
       const hours = inputs[0].value.padStart(2, '0');
       const minutes = inputs[1].value.padStart(2, '0');
-      const time = `${hours}:${minutes}`;
 
-      winPrefTimeValues[element] = time;
+      winPrefTimeValues[element] = `${hours}:${minutes}`;
     });
   };
 
   data.forEach((element) => {
     const inputsContainer = elementsContainer.querySelector(`[data-input-id="time-${element}"]`),
-      inputs = inputsContainer.querySelectorAll('input'),
-      calcDist = document.querySelectorAll('.calc-dist');
+      inputs = inputsContainer.querySelectorAll('input');
 
     inputs.forEach((input) => {
       input.addEventListener('input', () => {

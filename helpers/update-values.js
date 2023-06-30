@@ -1,4 +1,5 @@
-import * as helpersJs from './helpers.js';
+import * as componentsJs from '../components/components.js';
+import { convertTimeToDecimal } from './helpers.js';
 
 const startDataInput = document.getElementById('startDataInput'),
   groupLists = document.querySelectorAll('.group-list'),
@@ -9,12 +10,12 @@ const startDataInput = document.getElementById('startDataInput'),
   calcWinTime = document.querySelectorAll('.calc-win-time');
 
 export const updateValues = (values, index, winPrefTimeValues, prefLengthDist) => {
-  const startDataInputValue = helpersJs.convertTimeToDecimal(startDataInput.value);
+  const startDataInputValue = convertTimeToDecimal(startDataInput.value);
 
-  helpersJs.renderTableData(groupLists[index], values);
-  helpersJs.renderExpectedSpeed(calcSpeed[index], values, startDataInputValue);
-  helpersJs.renderWinPrefTime(winPrefTimes[index], values, winPrefTimeValues, startDataInputValue);
-  helpersJs.renderCalcDist(calcDist[index], values, winPrefTimeValues, startDataInputValue);
-  helpersJs.renderPrefLengthDist(prefLengthDistances[index], values, prefLengthDist, startDataInputValue);
-  helpersJs.renderCalcWinTime(calcWinTime[index], values, prefLengthDist, startDataInputValue);
-}
+  componentsJs.renderTableData(groupLists[index], values);
+  componentsJs.renderExpectedSpeed(calcSpeed[index], values, startDataInputValue);
+  componentsJs.renderWinPrefTime(winPrefTimes[index], values, winPrefTimeValues, startDataInputValue);
+  componentsJs.renderCalcDist(calcDist[index], values, winPrefTimeValues, startDataInputValue);
+  componentsJs.renderPrefLengthDist(prefLengthDistances[index], values, prefLengthDist, startDataInputValue);
+  componentsJs.renderCalcWinTime(calcWinTime[index], values, prefLengthDist, startDataInputValue);
+};

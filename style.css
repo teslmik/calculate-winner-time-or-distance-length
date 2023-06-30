@@ -122,10 +122,7 @@ header {
   }
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-input[type="time"]::-webkit-clear-button {
+.data-input::-webkit-calendar-picker-indicator,
+.data-input::-webkit-clear-button {
   display: none;
 }
