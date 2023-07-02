@@ -16,10 +16,14 @@ export const renderWinPrefTime = (
 
     return `
       <div class="grid-item input-container" data-input-id="time-${element}">
-        <input name="minutes" type="number" min=0 max=60 value="${value[0]}" />
-        <span>хв</span>
-        <input name="seconds" type="number" min=0 max=60 value="${value[1]}" />
-        <span>сек</span>
+        <div class="input-group">
+          <input class="form-control" name="minutes" type="number" min=0 max=60 value="${value[0]}" />
+          <span class="input-group-text">хв</span>
+        </div>
+        <div class="input-group">
+          <input class="form-control" name="seconds" type="number" min=0 max=60 value="${value[1]}" />
+          <span class="input-group-text">сек</span>
+        </div>
       </div>
     `;
   });

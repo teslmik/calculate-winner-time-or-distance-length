@@ -6,53 +6,136 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculation of the winner's time</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"
+    defer></script>
   <script type="module" src="app.js" defer></script>
 </head>
 
 <body>
   <header>
-    <fieldset class="header-data">
-      <legend>Початкові дані</legend>
+    <fieldset class="header-data border p-2">
+      <legend class="float-none w-auto p-1 m-0">Початкові дані</legend>
       <label for="startDataInput">Очікувана середня швидкість групи Ч21Е:</label>
-      <div class="input-header-container">
-        <input type="time" id="startDataInput" value="04:00" class="data-input" />
-        <span>хв/км</span>
+      <div class="input-group">
+        <input type="time" id="startDataInput" value="04:00" class="data-input form-control" />
+        <span class="input-group-text">хв/км</span>
       </div>
     </fieldset>
-    <fieldset class="header-checkbox">
-      <legend>Виберіть вікові групи</legend>
+    <fieldset class="header-checkbox border p-2">
+      <legend class="float-none w-auto p-1 m-0">Виберіть вікові групи</legend>
       <div class="checkbox-container">
         <div class="men-checkbox">
-          <label for="m16"><input type="checkbox" name="m16" id="m16" />Ч16</label>
-          <label for="m18"><input type="checkbox" name="m18" id="m18" />Ч18</label>
-          <label for="m20"><input type="checkbox" name="m20" id="m20" />Ч20</label>
-          <label for="m21e"><input type="checkbox" name="m21e" id="m21e" />Ч21E</label>
-          <label for="m35"><input type="checkbox" name="m35" id="m35" />Ч35</label>
-          <label for="m40"><input type="checkbox" name="m40" id="m40" />Ч40</label>
-          <label for="m45"><input type="checkbox" name="m45" id="m45" />Ч45</label>
-          <label for="m50"><input type="checkbox" name="m50" id="m50" />Ч50</label>
-          <label for="m55"><input type="checkbox" name="m55" id="m55" />Ч55</label>
-          <label for="m60"><input type="checkbox" name="m60" id="m60" />Ч60</label>
-          <label for="m65"><input type="checkbox" name="m65" id="m65" />Ч65</label>
-          <label for="m70"><input type="checkbox" name="m70" id="m70" />Ч70</label>
-          <label for="m75"><input type="checkbox" name="m75" id="m75" />Ч75</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m16" id="m16" />
+            <label class="form-check-label" for="m16">Ч16</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m18" id="m18" />
+            <label class="form-check-label" for="m18">Ч18</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m20" id="m20" />
+            <label class="form-check-label" for="m20">Ч20</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m21e" id="m21e" />
+            <label class="form-check-label" for="m21e">Ч21E</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m35" id="m35" />
+            <label class="form-check-label" for="m35">Ч35</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m40" id="m40" />
+            <label class="form-check-label" for="m40">Ч40</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m45" id="m45" />
+            <label class="form-check-label" for="m45">Ч45</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m50" id="m50" />
+            <label class="form-check-label" for="m50">Ч50</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m55" id="m55" />
+            <label class="form-check-label" for="m55">Ч55</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m60" id="m60" />
+            <label class="form-check-label" for="m60">Ч60</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m65" id="m65" />
+            <label class="form-check-label" for="m65">Ч65</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m70" id="m70" />
+            <label class="form-check-label" for="m70">Ч70</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="m75" id="m75" />
+            <label class="form-check-label" for="m75">Ч75</label>
+          </div>
         </div>
         <hr class="checkbox-hr" />
         <div class="women-checkbox">
-          <label for="w16"><input type="checkbox" name="w16" id="w16" />Ж16</label>
-          <label for="w18"><input type="checkbox" name="w18" id="w18" />Ж18</label>
-          <label for="w20"><input type="checkbox" name="w20" id="w20" />Ж20</label>
-          <label for="w21e"><input type="checkbox" name="w21e" id="w21e" />Ж21E</label>
-          <label for="w35"><input type="checkbox" name="w35" id="w35" />Ж35</label>
-          <label for="w40"><input type="checkbox" name="w40" id="w40" />Ж40</label>
-          <label for="w45"><input type="checkbox" name="w45" id="w45" />Ж45</label>
-          <label for="w50"><input type="checkbox" name="w50" id="w50" />Ж50</label>
-          <label for="w55"><input type="checkbox" name="w55" id="w55" />Ж55</label>
-          <label for="w60"><input type="checkbox" name="w60" id="w60" />Ж60</label>
-          <label for="w65"><input type="checkbox" name="w65" id="w65" />Ж65</label>
-          <label for="w70"><input type="checkbox" name="w70" id="w70" />Ж70</label>
-          <label for="w75"><input type="checkbox" name="w75" id="w75" />Ж75</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w16" id="w16" />
+            <label class="form-check-label" for="w16">Ж16</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w18" id="w18" />
+            <label class="form-check-label" for="w18">Ж18</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w20" id="w20" />
+            <label class="form-check-label" for="w20">Ж20</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w21e" id="w21e" />
+            <label class="form-check-label" for="w21e">Ж21E</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w35" id="w35" />
+            <label class="form-check-label" for="w35">Ж35</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w40" id="w40" />
+            <label class="form-check-label" for="w40">Ж40</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w45" id="w45" />
+            <label class="form-check-label" for="w45">Ж45</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w50" id="w50" />
+            <label class="form-check-label" for="w50">Ж50</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w55" id="w55" />
+            <label class="form-check-label" for="w55">Ж55</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w60" id="w60" />
+            <label class="form-check-label" for="w60">Ж60</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w65" id="w65" />
+            <label class="form-check-label" for="w65">Ж65</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w70" id="w70" />
+            <label class="form-check-label" for="w70">Ж70</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="w75" id="w75" />
+            <label class="form-check-label" for="w75">Ж75</label>
+          </div>
         </div>
       </div>
     </fieldset>

@@ -2,7 +2,7 @@
 
 export const onChangeGroupList = (event, menValues, womenValues) => {
   const checkbox = event.target;
-  const label = checkbox.closest('label');
+  const label = checkbox.closest('.form-check');
   const value = label.textContent.trim();
 
   if (checkbox.checked) {

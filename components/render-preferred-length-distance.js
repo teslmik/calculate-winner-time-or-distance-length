@@ -16,8 +16,10 @@ export const renderPrefLengthDist = (
 
     return `
       <div class="grid-item input-container" data-input-id="dist-${element}">
-        <input name="minutes" type="number" min=0 max=60 step="0.1" value="${value}" />
-        <span>км</span>
+        <div class="input-group">
+          <input class="form-control" name="minutes" type="number" min=0 max=60 step="0.1" value="${value}" />
+          <span class="input-group-text">км</span>
+        </div>
       </div>
     `;
   });
