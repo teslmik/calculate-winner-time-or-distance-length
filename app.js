@@ -6,7 +6,8 @@ import { updateValues, onChangeGroupList } from './helpers/helpers.js';
 
 const tableHeaders = document.querySelectorAll('.table-header'),
   checkboxContainer = document.querySelector('.checkbox-container'),
-  startDataInput = document.getElementById('startDataInput');
+  startDataInput = document.getElementById('startDataInput'),
+  gridBody = document.querySelectorAll('.grid-body');
 
 const menValues = [];
 const womenValues = [];
@@ -30,9 +31,14 @@ checkboxContainer.addEventListener('change', (e) => {
   onChangeGroupList(e, menValues, womenValues);
 
   if (menValues) {
+    gridBody[0].style.display = 'grid';
     updateValues(menValues, 0, menWinPrefTimeValues, menPrefLengthDist);
   }
   if (womenValues) {
+    gridBody[1].style.display = 'grid';
     updateValues(womenValues, 1, womenWinPrefTimeValues, womenPrefLengthDist);
   }
+  if (menValues.length === 0) gridBody[0].style.display = 'none';
+  if (womenValues.length === 0) gridBody[1].style.display = 'none';
+
 });

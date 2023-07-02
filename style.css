@@ -17,6 +17,10 @@ label {
   align-items: center;
 }
 
+.border {
+  border-radius: 0.375rem;
+}
+
 .checkbox-hr {
   margin: 10px 0;
 }
@@ -59,10 +63,20 @@ header {
   max-width: 100px;
 }
 
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr repeat(4, 1fr);
   grid-gap: 10px;
+}
+
+.grid-body {
+  display: none;
 }
 
 .grid-column {
@@ -71,7 +85,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .grid-item {
@@ -112,6 +125,12 @@ header {
 }
 
 @media (max-width: 792px) {
+  body,
+  input.form-control,
+  .input-group-text {
+    font-size: 14px;
+  }
+
   header {
     display: flex;
     flex-direction: column;
@@ -137,4 +156,8 @@ header {
 .data-input::-webkit-calendar-picker-indicator,
 .data-input::-webkit-clear-button {
   display: none;
+}
+
+input:checked + label {
+  font-weight: bold;
 }
